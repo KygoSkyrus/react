@@ -1,0 +1,63 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#quote-box{
+  width: 35rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color:white;
+  border-radius: 0.2rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#text{
+  text-align: center;
+  font-size: 1.3rem;
+}
+.flex2{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+.flex3{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.flex3 a{
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  color: white;
+}
+.flex3 button{
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  color: white;
+}
+.flex3 a:hover,
+.flex3 button:hover{
+  opacity: 0.9;
+  transition: 500ms;
+}
+.name{
+  width: 100%;
+  color: white;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 1%;
+  text-align: center;
+}
+@media (max-width:570px){
+  #quote-box{
+    width: 80vw;
+  }
+}
