@@ -1,0 +1,129 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: #ececec;
+}
+#drum-machine{
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 8px;
+  border: 6px solid rgb(233, 177, 56);
+  background-color: rgb(226, 219, 219);
+  box-shadow:0 0 20px;
+}
+.keys{
+  width: 300px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.drum-pad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: gray;
+  box-shadow: 6px 2px 4px;
+  cursor: pointer;
+}
+.drum-pad:focus{
+  outline: none;
+  border: none;
+}
+.drum-pad:hover{
+  background-color:rgb(117, 115, 115);
+}
+.info{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+#pwr{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+#power {
+  opacity: 0;
+}
+.checkmark{
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0px;
+}
+
+#vol{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 30px;
+}
+#volume{
+  width: 140px;
+  appearance: none;
+  height: 2px;
+  cursor: pointer;
+  background: black;
+}
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: black;
+  width: 15px;
+  height:15px;
+  border-radius: 50%;
+}
+#display{
+  width: 160px;
+  height: 50px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 2px 4px;
+  font-weight: 400;
+}
+#by{
+  width: 100%;
+  position: absolute;
+  bottom: 12px;
+  text-align: center;
+}
+@media (max-width:600px){
+  #drum-machine{
+    width: fit-content;
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .keys{
+    height: 200px;
+  }
+  .info{
+    height: 220px;
+  }
+  #volume{
+    width: 200px;
+  }
+}
